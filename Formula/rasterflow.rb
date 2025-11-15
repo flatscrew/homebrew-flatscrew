@@ -17,13 +17,11 @@ class Rasterflow < Formula
   depends_on "libgee"
   depends_on "json-glib"
   depends_on "gegl"
-
-  # your libraries (internal to your tap)
-  depends_on "flatscrew/libgflow/libgflow"
-  depends_on "flatscrew/libgtkflow4/libgtkflow4"
-
-  # if rasterflow uses GObject-introspection (very likely)
   depends_on "gobject-introspection"
+
+  # libgtkflow4 dependencies
+  depends_on "flatscrew/flatscrew/libgflow"
+  depends_on "flatscrew/flatscrew/libgtkflow4"
 
   def install
     system "meson", "setup", "build", *std_meson_args
