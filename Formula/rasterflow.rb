@@ -24,7 +24,7 @@ class Rasterflow < Formula
   depends_on "flatscrew/osx/libgtkflow4"
 
   def install
-    system "meson", "setup", "build", *std_meson_args
+    system "meson", "setup", "build", *std_meson_args, "-Dcompile_gschemas=false"
     system "meson", "compile", "-C", "build"
     system "meson", "install", "-C", "build"
   end
