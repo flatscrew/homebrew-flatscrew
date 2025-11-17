@@ -29,7 +29,7 @@ class Rasterflow < Formula
   end
 
   def post_install
-    system "#{Formula["glib"].opt_bin}/glib-compile-schemas", "#{share}/glib-2.0/schemas"
+    system "#{Formula["glib"].opt_bin}/glib-compile-schemas", HOMEBREW_PREFIX/"share/glib-2.0/schemas"
   end
 
   test do
