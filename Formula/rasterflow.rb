@@ -10,11 +10,12 @@ class Rasterflow < Formula
   depends_on "pkg-config" => :build
   depends_on "vala" => :build
 
+  depends_on "flatscrew/osx/gegl"
   depends_on "flatscrew/osx/libgflow"
   depends_on "flatscrew/osx/libgtkflow4"
 
-  depends_on "gdk-pixbuf"
-  depends_on "gegl"
+  # depends_on "gdk-pixbuf"
+  # depends_on "gegl"
   depends_on "glib"
   depends_on "gobject-introspection"
   depends_on "gtk4"
